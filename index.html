@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo" style="color:whitesmoke">getaway.com</h1> 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="28tours.html">Book now!</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="about28.html">About</a></li>
+            <li class="ctn"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <img src="menu-btn.png" alt="" class="menu-btn">
+
+
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>Explore the colorful world</h2>
+            <div class="line"></div>
+            <h1> A WONDERFULL GIFT</h1>
+            <a href="explore.html" class="ctn">Learn More</a> 
+        </div>
+    </header>
+
+<section class="events">
+    <div class="title">
+        <h1>Upcoming events</h1>
+        <div class="line"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="https://i.pinimg.com/736x/69/25/bd/6925bd91e2de702e1dcd043e30f35fe2--walking-holiday-welt.jpg" style="width: 500px;" alt="">
+            <h4>Everest Camp Treck</h4>
+            <p>Embracing the wild, one step at a time. Conquering heights, creating unforgettable memories. Life is a journey, Let's trek it! <optio class="15"></optio></p>
+            <a href="explore.html" class="ctn">Learn More</a>
+        </div>
+        <div class="col">
+            <img src="https://i.pinimg.com/736x/e9/44/d1/e944d1c4540c41ddebfc437b35318282--walking-holiday-mountain-range.jpg" style="width: 500px;" ;"" alt="">
+            <h4>Walking holidays</h4>
+            <p>Exploring new places, one step at a time. Discovering hidden gems and creating unforgettable memories! <optio class="15"></optio></p>
+            <a href="explore.html" class="ctn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="explore">
+   <div class="explore-content">
+    <h1>EXPLORE THE WORLD</h1>
+    <div class="line"></div>
+    <p>Discovering the beauty of diverse cultures, tasting new flavors, and making memories that last a lifetime</p>
+    <a href="explore.html" class="ctn">Learn more</a>
+   </div>
+</section>
+
+<section class="tours">
+    <div class="row">
+        <div class="col content-col">
+            <h1>UPCOMING TOURS AND DESTINATIONS</h1>
+
+            <div class="line"></div>
+            <p>Get ready to uncover hidden gems, experience unique cultures, and make memories in captivating destinations!</p>
+            <a href="explore.html" class="ctn">Learn More</a>
+        </div>
+        <div class="col image-col">
+            <div class="image-gallery">
+                <img src="https://www.coolpicking.com/wp-content/uploads/2015/01/7-best-types-of-people-to-travel-with.jpg" alt="">
+                <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/g0dzyjfrlqnq66wrsjcz" alt="">
+                <img src="https://th.bing.com/th/id/OIP.M456_SLvh0bFGH89mUN8wgHaE8?rs=1&pid=ImgDetMain" alt="">
+                <img src="https://assets.atdw-online.com.au/images/1ba5d74ec40cb6f7c98ef1567b860375.jpeg?rect=196%2C0%2C3069%2C2302&w=745&h=559&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjI0ODQyZDI3MDE1NGI0NTU0OWZjZSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9" alt="">
+        </div> 
+    </div> 
+</div> 
+</section> 
+
+<section class="footer">
+    <p> Btm layout 2nd stage Bengaluru,India | Phone: 800-123-456 | Email: contact@example.com</p>
+    <p>Copyright © 2024 Getover.com</p>
+</section>
+
+
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks = document.querySelector('.nav-links')
+
+    menuBtn.addEventListener('click',()=>{
+        navlinks.classList.toggle('mobile-menu')
+    })
+</script>
+
+</body>
+</html>

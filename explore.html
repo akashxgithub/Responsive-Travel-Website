@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo" style="color:whitesmoke">getaway.com</h1> 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="28tours.html">Book now!</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="about28.html">About</a></li>
+            <li class="ctn"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #city-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .city-card {
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .city-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+
+
+    <header>
+        <h1 style="color: red ">Explore Our Featured Cities and Upcoming Events</h1>
+    </header>
+
+    <div id="city-container"></div>
+
+    <script>
+        // City data
+        const cities = [
+            { name: "Paris", description: "The City of Lights, known for its art, fashion, and gastronomy." },
+            { name: "Tokyo", description: "Japan's bustling capital, a mix of modern and traditional culture." },
+            { name: "New York", description: "The Big Apple, famous for its skyscrapers, theaters, and diversity." },
+            { name: "London", description: "Capital of the United Kingdom, rich in history and iconic landmarks." },
+            { name: "Rome", description: "Eternal City with ancient ruins, art, and delicious Italian cuisine." },
+            { name: "Sydney", description: "Australian gem with a stunning harbor, beaches, and vibrant culture." },
+            { name: "Bengaluru", description: "The Silicon Oasis of India" },
+            { name: "Mumbai", description: "The City of Dreams by the Arabian Sea" },
+            { name: "Dubai", description: "Futuristic city known for its luxury shopping, modern architecture, and nightlife." },
+            { name: "Beijing", description: "Where Ancient Majesty Meets Modern Marvels" }
+            // { name: "Everest Camp Treck", description: "Embracing the wild, one step at a time. Conquering heights, creating unforgettable memories. Life is a journey, Let's trek it!" }
+            // { name: "Walking holidays", description: "Exploring new places, one step at a time. Discovering hidden gems and creating unforgettable memories!" }
+        ];
+
+        // Function to create city cards
+        function createCityCard(city) {
+            const card = document.createElement("div");
+            card.classList.add("city-card");
+
+            const title = document.createElement("h2");
+            title.textContent = city.name;
+
+            const description = document.createElement("p");
+            description.textContent = city.description;
+
+            card.appendChild(title);
+            card.appendChild(description);
+
+            return card;
+        }
+
+        // Display city cards on the page
+        const cityContainer = document.getElementById("city-container");
+
+        cities.forEach(city => {
+            const cityCard = createCityCard(city);
+            cityContainer.appendChild(cityCard);
+        });
+    </script>
+</body>
+</html>

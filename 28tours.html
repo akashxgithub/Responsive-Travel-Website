@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="28tours.css">
+
+</head>
+
+    <nav class="navbar">
+        <h1 class="logo" style="color:whitesmoke">getaway.com</h1> 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="28tours.html">Book now!</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="about28.html">About</a></li>
+            <li class="ctn"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <img src="menu-btn.png" alt="" class="menu-btn">
+
+
+    </nav>
+    <body>
+    
+    <header>
+    
+            <!-- <h2></h2> -->
+             
+
+            <div class="lin"><form id="bookingForm">
+                <label for="fullName">BOOK TICKETS <br> Full Name:</label>
+                <input type="text" id="fullName" required><br>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
+            
+                <label for="city">Select Package</label>
+                <select id="city" required>
+                    <option value="" disabled selected>Select City</option>
+                    <option value="New York">New York</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="London">London</option>
+                    <option value="Rome">Rome</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Beijing">Beijing</option>
+                </select><br>
+            
+                <label for="numTickets">Number of Tickets:</label>
+                <input type="number" id="numTickets" min="1" required><br>
+            
+                <label for="travelDate">Travel Date:</label>
+                <input type="date" id="travelDate" required><br>
+            
+                <button type="button" onclick="bookTour()">Book Now</button>
+            </form>
+            
+            <script>
+                function bookTour() {
+                    const fullName = document.getElementById('fullName').value;
+                    const email = document.getElementById('email').value;
+                    const city = document.getElementById('city').value;
+                    const numTickets = document.getElementById('numTickets').value;
+                    const travelDate = document.getElementById('travelDate').value;
+            
+                    if (!fullName || !email || city === "" || !numTickets || !travelDate) {
+                        alert("Please fill in all fields");
+                        return;
+                    }
+            
+                    // Assume you have a backend to handle booking logic
+                    // You can send this data to the server for processing
+                    // For now, just display a confirmation message
+                    const confirmationMessage = `Booking Confirmed!\n\nName: ${fullName}\nEmail: ${email}\nCity: ${city}\nTickets: ${numTickets}\nTravel Date: ${travelDate}`;
+                    alert(confirmationMessage);
+                    
+                    // You can also reset the form if needed
+                    document.getElementById('bookingForm').reset();
+                }
+            </script>
+
+            </div>
+           
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Additional animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    animation: fadeIn 1s ease;
+}
+    </style>
+</head>
+</hbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Booking</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://wallpaperaccess.com/full/3482571.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Additional animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    animation: fadeIn 1s ease;
+}
+    </style>
+</head>
+<body>
+
+<!-- <h2>Tour Booking</h2> -->
+
+<!-- <form id="bookingForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <label for="city">Select Package</label>
+    <select id="city" required>
+        <option value="" disabled selected>Select City</option>
+        <option value="New York">New York</option>
+        <option value="Paris">Paris</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="London">London</option>
+        <option value="Rome">Rome</option>
+        <option value="Sydney">Sydney</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Beijing">Beijing</option>
+    </select><br>
+
+    <label for="numTickets">Number of Tickets:</label>
+    <input type="number" id="numTickets" min="1" required><br>
+
+    <label for="travelDate">Travel Date:</label>
+    <input type="date" id="travelDate" required><br>
+
+    <button type="button" onclick="bookTour()">Book Now</button>
+</form>
+
+<script>
+    function bookTour() {
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const city = document.getElementById('city').value;
+        const numTickets = document.getElementById('numTickets').value;
+        const travelDate = document.getElementById('travelDate').value;
+
+        if (!fullName || !email || city === "" || !numTickets || !travelDate) {
+            alert("Please fill in all fields");
+            return;
+        }
+
+        // Assume you have a backend to handle booking logic
+        // You can send this data to the server for processing
+        // For now, just display a confirmation message
+        const confirmationMessage = `Booking Confirmed!\n\nName: ${fullName}\nEmail: ${email}\nCity: ${city}\nTickets: ${numTickets}\nTravel Date: ${travelDate}`;
+        alert(confirmationMessage);
+        
+        // You can also reset the form if needed
+        document.getElementById('bookingForm').reset();
+    }
+</script>
+
+</body>
+</html> --> -->

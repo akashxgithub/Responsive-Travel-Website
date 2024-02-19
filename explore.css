@@ -1,0 +1,39 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+
+ 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul ,ul :hover {
+    list-style: none;
+    color: #fc036b;
+}
+
+.active {
+    color: #fc036b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+body ,html {
+    overflow-x: hidden;
+    background: url(https://wallpapercave.com/wp/wp4673591.jpg);
+}
